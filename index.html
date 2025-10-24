@@ -1,1 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Adithi S — Computer Science Portfolio</title>
+  <meta name="description" content="Portfolio of Adithi S — Computer Science Student | Software Development | Machine Learning | Cybersecurity" />
+  <style>
+    :root{
+      --bg:#0b1020;
+      --card:#0f1724;
+      --muted:#9aa7bf;
+      --accent:#3b82f6;
+      --glass: rgba(255,255,255,0.03);
+      --radius:14px;
+      --max:1100px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,var(--bg),#071024);color:#e6eef8;display:flex;align-items:center;justify-content:center;padding:40px;font-size:16px}
+    .wrap{width:100%;max-width:var(--max)}
+
+    header{display:flex;gap:24px;align-items:center;margin-bottom:28px}
+    .avatar{width:110px;height:110px;border-radius:18px;flex:0 0 110px;background:linear-gradient(135deg,var(--accent),#7dd3fc);display:grid;place-items:center;box-shadow:0 6px 18px rgba(0,0,0,0.6)}
+    .avatar svg{width:72px;height:72px;opacity:0.98}
+    .heading{flex:1}
+    .heading h1{margin:0;font-size:28px;letter-spacing:0.4px}
+    .heading p{margin:6px 0 0;color:var(--muted)}
+
+    nav{display:flex;gap:12px}
+    a.btn{color:var(--accent);text-decoration:none;border:1px solid rgba(59,130,246,0.16);padding:10px 12px;border-radius:10px;background:transparent;font-weight:600}
+
+    main{display:grid;grid-template-columns:1fr 380px;gap:24px}
+    @media (max-width:880px){main{grid-template-columns:1fr} .sidebar{order:2}}
+
+    .card{background:linear-gradient(180deg,var(--card),rgba(11,16,32,0.9));padding:20px;border-radius:var(--radius);box-shadow:0 8px 30px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.02)}
+    .section{margin-bottom:18px}
+    h2{margin:0 0 12px;font-size:18px}
+    p.lead{color:var(--muted);line-height:1.5}
+
+    /* skills */
+    .skills{display:flex;flex-wrap:wrap;gap:10px}
+    .skill{background:var(--glass);padding:8px 10px;border-radius:10px;color:var(--muted);font-weight:600;font-size:14px}
+
+    /* projects grid */
+    .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    @media (max-width:700px){.projects{grid-template-columns:1fr}}
+    .proj{padding:12px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.025)}
+    .proj h3{margin:0 0 6px;font-size:15px}
+    .proj p{margin:0;color:var(--muted);font-size:14px}
+    .tags{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+    .tag{font-size:12px;padding:6px 8px;border-radius:999px;background:rgba(59,130,246,0.12);color:var(--accent);font-weight:700}
+
+    /* sidebar */
+    .sidebar .card{position:sticky;top:24px}
+    .contact-list{display:flex;flex-direction:column;gap:8px}
+    .contact-list a{color:inherit;text-decoration:none;padding:10px;border-radius:8px;background:rgba(255,255,255,0.02);display:flex;gap:8px;align-items:center}
+    .muted{color:var(--muted);font-size:14px}
+
+    footer{margin-top:20px;color:var(--muted);text-align:center;font-size:13px}
+
+    /* small utilities */
+    .row{display:flex;gap:12px;align-items:center}
+    .pill{padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.02);font-weight:700}
+    .code{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace;background:rgba(255,255,255,0.02);padding:6px 8px;border-radius:8px}
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <header>
+      <div class="avatar card" aria-hidden>
+        <!-- simple initials avatar -->
+        <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect rx="18" width="120" height="120" fill="white" fill-opacity="0.06"/>
+          <text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle" font-size="46" font-family="Inter, Roboto, sans-serif" fill="white">AS</text>
+        </svg>
+      </div>
+
+      <div class="heading">
+        <h1>Adithi S</h1>
+        <p class="muted">Computer Science Student • Software Developer • Machine Learning Enthusiast</p>
+        <div style="margin-top:8px;display:flex;gap:8px">
+          <a class="btn" href="#projects">Projects</a>
+          <a class="btn" href="#contact">Contact</a>
+        </div>
+      </div>
+
+      <nav style="margin-left:auto">
+        <a class="btn" href="#about">About</a>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <div class="card section" id="about">
+          <h2>About</h2>
+          <p class="lead">Hi — I'm <strong>Adithi S</strong>, a Computer Science student with hands-on experience in full-stack development, algorithms, and applied machine learning. I enjoy building reliable software, solving algorithmic problems, and experimenting with data-driven models. Seeking internships and collaborative projects where I can learn and contribute.</p>
+        </div>
+
+        <div class="card section" id="skills">
+          <h2>Technical Skills</h2>
+          <div class="skills" style="margin-top:8px">
+            <div class="skill">Python</div>
+            <div class="skill">Java</div>
+            <div class="skill">C/C++</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">React</div>
+            <div class="skill">Node.js</div>
+            <div class="skill">SQL</div>
+            <div class="skill">Machine Learning</div>
+            <div class="skill">Git & GitHub</div>
+            <div class="skill">Linux</div>
+          </div>
+        </div>
+
+        <div class="card section" id="projects">
+          <h2>Projects</h2>
+          <div class="projects" style="margin-top:10px">
+
+            <article class="proj">
+              <h3>Smart Attendance System (Face Recognition)</h3>
+              <p>Created an automated attendance system using OpenCV and face embeddings to mark attendance in classrooms with a Flask interface.</p>
+              <div class="tags"><span class="tag">Python</span><span class="tag">OpenCV</span><span class="tag">Flask</span></div>
+            </article>
+
+            <article class="proj">
+              <h3>Real-time Chat App</h3>
+              <p>Built a full-stack chat application with user authentication, rooms, and end-to-end message flow using Socket.IO.</p>
+              <div class="tags"><span class="tag">Node.js</span><span class="tag">React</span><span class="tag">Socket.IO</span></div>
+            </article>
+
+            <article class="proj">
+              <h3>Movie Recommendation System</h3>
+              <p>Developed collaborative-filtering based recommender; handled data processing and REST API for recommendations.</p>
+              <div class="tags"><span class="tag">Machine Learning</span><span class="tag">Pandas</span><span class="tag">Scikit-learn</span></div>
+            </article>
+
+            <article class="proj">
+              <h3>Algorithm Visualizer</h3>
+              <p>An interactive web visualizer for sorting and pathfinding algorithms to help students learn step-by-step.</p>
+              <div class="tags"><span class="tag">JavaScript</span><span class="tag">D3</span><span class="tag">Education</span></div>
+            </article>
+
+          </div>
+        </div>
+
+        <div class="card section" id="experience">
+          <h2>Experience & Internships</h2>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <div>
+              <strong>Software Developer Intern</strong> — XYZ Technologies (Summer 2024)
+              <p class="muted" style="margin:4px 0 0">Worked on backend APIs and automated test suites; improved response time by 18% for core endpoints.</p>
+            </div>
+
+            <div>
+              <strong>Research Assistant</strong> — AI Lab, [University] (2023)
+              <p class="muted" style="margin:4px 0 0">Assisted in experimentation for NLP models and prepared datasets for training and evaluation.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card section" id="education">
+          <h2>Education</h2>
+          <p><strong>B.Tech in Computer Science</strong> — [Your University], Expected Graduation: <span class="pill">2026</span></p>
+          <p class="muted" style="margin-top:6px">Relevant coursework: Data Structures & Algorithms, Databases, Operating Systems, Machine Learning, Computer Networks.</p>
+        </div>
+
+      </section>
+
+      <aside class="sidebar">
+        <div class="card">
+          <h2>Contact</h2>
+          <p class="muted">Open to internships, freelance, and collaboration.</p>
+          <div class="contact-list" style="margin-top:10px">
+            <a href="mailto:adithi.email@example.com">✉️ Email — adithi.email@example.com</a>
+            <a href="https://github.com/adithi-s" target="_blank" rel="noopener">🐙 GitHub — github.com/adithi-s</a>
+            <a href="https://linkedin.com/in/adithi-s" target="_blank" rel="noopener">🔗 LinkedIn — linkedin.com/in/adithi-s</a>
+          </div>
+
+          <div style="margin-top:14px">
+            <h2>Quick Info</h2>
+            <p class="muted">Location: [City, Country]</p>
+            <p class="muted">Availability: <strong>Open to internships — Summer/Fall</strong></p>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <h2>Achievements</h2>
+          <ul class="muted">
+            <li>Winner — College Hackathon 2024</li>
+            <li>Top 10 — National Coding Challenge</li>
+            <li>Dean's List — 2023</li>
+          </ul>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <h2>Resume</h2>
+          <p class="muted">Download a PDF resume:</p>
+          <a class="btn" href="#" onclick="window.open('resume.pdf','_blank')">Download Resume</a>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <p>Made with ♥ by <strong>Adithi S</strong> — Computer Science Student.</p>
+      <p class="muted">To edit: save this file as <span class="code">adithi_portfolio.html</span> and open in your browser.</p>
+    </footer>
+  </div>
+
+  <!-- small script to enable mail and basic interactions -->
+  <script>
+    // replace placeholders quickly if present
+    document.querySelectorAll('a[href="#"]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();alert('Replace the # with your file link (e.g., resume.pdf) or a real URL.')}))
+  </script>
+</body>
+</html>
+
 
